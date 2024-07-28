@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Display</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e5e5e5;
+            color: #000000;
+            margin: 20px;
+            padding: 0;
+        }
+        h1 {
+            color: #14213d;
+        }
+        .error {
+            color: #fca311;
+            background-color: #ffffff;
+            border: 1px solid #fca311;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        p {
+            color: #14213d;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            border: 2px solid #14213d;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Image Display</h1>
+
+    <p>Hello yaar, this is your image</p>
+    <img src="<%= path %>" alt="Uploaded Image"/>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form with File Upload</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e5e5e5;
+            color: #000000;
+            margin: 20px;
+            padding: 0;
+        }
+        h1 {
+            color: #14213d;
+        }
+        .error {
+            color: #fca311;
+            background-color: #ffffff;
+            border: 1px solid #fca311;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            color: #14213d;
+        }
+        input[type="text"],
+        input[type="file"],
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #dcdcdc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        input[type="text"],
+        input[type="file"] {
+            background-color: #ffffff;
+            color: #000000;
+        }
+        button {
+            background-color: #fca311;
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #e5e5e5;
+            color: #000000;
+        }
+    </style>
+</head>
+<body>
+    <h1>Submit Your Information</h1>
+    
+    <!-- <% if (mess && mess.length > 0) { %>
+        <div class="error">
+            <%= mess %>
+        </div>
+    <% } %> -->
+
+    <form action="/auth" method="POST" enctype="multipart/form-data">
+        <label for="name">NAME:</label>
+        <input type="text" name="name" id="name" required/>
+        
+        <label for="image">FILE:</label>
+        <input type="file" name="image" id="image" required/>
+        
+        <button type="submit">SUBMIT</button>
+    </form>
+</body>
+</html>
